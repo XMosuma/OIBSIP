@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args)
      {
         // Sample user
-        User user = new User("username", "password");
+        User user = new User("xman", "psswd");
 
         // Sample questions
         Question[] questions = {
