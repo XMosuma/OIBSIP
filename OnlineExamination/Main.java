@@ -16,27 +16,28 @@ public class Main {
         // Sample exam
         Exam exam = new Exam(questions, 30); // 30 minutes duration
 
-        // Sample login
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter username: ");
-        String enteredUsername = scanner.nextLine();
-        System.out.print("Enter password: ");
-        String enteredPassword = scanner.nextLine();
+        try (// Sample login
+        Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter username: ");
+            String enteredUsername = scanner.nextLine();
+            System.out.print("Enter password: ");
+            String enteredPassword = scanner.nextLine();
 
-        if (user.login(enteredUsername, enteredPassword)) {
-            System.out.println("Login successful.");
+            if (user.login(enteredUsername, enteredPassword)) {
+                System.out.println("Login successful.");
 
-            // Sample update profile
-            System.out.print("Enter new username: ");
-            String newUsername = scanner.nextLine();
-            System.out.print("Enter new password: ");
-            String newPassword = scanner.nextLine();
-            user.updateProfile(newUsername, newPassword);
+                // Sample update profile
+                System.out.print("Enter new username: ");
+                String newUsername = scanner.nextLine();
+                System.out.print("Enter new password: ");
+                String newPassword = scanner.nextLine();
+                user.updateProfile(newUsername, newPassword);
 
-            // Start exam
-            exam.startExam();
-        } else {
-            System.out.println("Invalid username or password.");
+                // Start exam
+                exam.startExam();
+            } else {
+                System.out.println("Invalid username or password.");
+            }
         }
     }
 }

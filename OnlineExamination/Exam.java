@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 class Exam {
     private Question[] questions;
+    @SuppressWarnings("unused")
     private int durationMinutes;
 
     public Exam(Question[] questions, int durationMinutes) {
